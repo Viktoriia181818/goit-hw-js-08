@@ -58,8 +58,6 @@ function onShowBigImage(e) {
     }
   }
 }
-
 new SimpleLightbox('.gallery a', {
-    captionDelay: 250,
-
+  captionDelay: 250,
 });
