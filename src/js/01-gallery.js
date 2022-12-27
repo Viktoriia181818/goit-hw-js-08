@@ -39,25 +39,25 @@ function onShowBigImage(e) {
   if (!e.target.classList.contains("gallery__image")) {
     return;
   }
-
-  let totalImageSrc = e.target.dataset.source;
-
-  const modal = simplelightbox.create(
-    `<img src="${totalImageSrc}" width="800" height="600">`
-  );
-  modal.show();
-
-  if (modal.visible()) {
-    window.addEventListener("keydown", onPressKeyESC);
-  }
-
-  function onPressKeyESC(evnt) {
-    if (evnt.code === "Escape") {
-      modal.close();
-      window.removeEventListener("keydown", onPressKeyESC);
-    }
-  }
 }
+  // let totalImageSrc = e.target.dataset.source;
+
+  // const modal = simpleLightbox.create(
+  //   `<img src="${totalImageSrc}" width="800" height="600">`
+  // );
+  // modal.show();
+
+  // if (modal.visible()) {
+  //   window.addEventListener("keydown", onPressKeyESC);
+  // }
+
+//   function onPressKeyESC(evnt) {
+//     if (evnt.code === "Escape") {
+//       modal.close();
+//       window.removeEventListener("keydown", onPressKeyESC);
+//     }
+//   }
+// }
 new SimpleLightbox('.gallery a', {
   captions: true,
   captionsData: "alt",
