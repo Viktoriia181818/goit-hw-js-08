@@ -19,6 +19,11 @@ function onFormData(e) {
 function onSubmitForm(e) {
   console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
   e.preventDefault();
+  if (email.value === '' || message.value === '') {
+    alert('Заповніть поле');
+    return;
+  }
+
   e.currentTarget.reset();
   localStorage.removeItem('feedback-form-state');
 }
@@ -30,6 +35,8 @@ function onSubmitForm(e) {
     message.value = state.message;
   }
 })();
+
+ 
 
 
 
