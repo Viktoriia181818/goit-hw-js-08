@@ -19,7 +19,7 @@ function onFormData(e) {
 function onSubmitForm(e) {
   console.log(JSON.parse(localStorage.getItem('feedback-form-state')));
   e.preventDefault();
-  if (email.value === '' || message.value === '') {
+  if (e.target.email.value === '' || e.target.message.value === '') {
     alert('Заповніть поле');
     return;
   }
