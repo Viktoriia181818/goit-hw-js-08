@@ -1,4 +1,4 @@
-import { throttle } from "Lodash";
+import { throttle } from "lodash";
 
 const form = document.querySelector('.feedback-form');
 const state = JSON.parse(localStorage.getItem('feedback-form-state'));
